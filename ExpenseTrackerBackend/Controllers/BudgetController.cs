@@ -28,10 +28,16 @@ namespace ExpenseTrackerBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<Budget>> SetBudget(Budget budget)
         {
+            if (budget == null)
+            {
+                return BadRequest("Budget cannot be null.");
+            }
+
             _context.Budgets.Update(budget);
             await _context.SaveChangesAsync();
             return Ok(budget);
         }
+
     }
 
 }

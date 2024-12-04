@@ -22,16 +22,44 @@ namespace ExpenseTrackerBackend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Expense>>> GetExpenses()
         {
-            return await _context.Expenses.ToListAsync();
+            var expenses = await _context.Expenses.ToListAsync();
+
+            // Calculate total expense for the current month
+            var totalExpenses = expenses.Where(e => e.Date.Month == DateTime.Now.Month && e.Date.Year == DateTime.Now.Year)
+                                        .Sum(e => (decimal)e.Amount);
+
+            // Get the budget for the current month
+            var budget = await _context.Budgets.FirstOrDefaultAsync(b => b.Month.Month == DateTime.Now.Month && b.Month.Year == DateTime.Now.Year);
+
+            if (budget != null)
+            {
+                var remainingBudget = budget.Amount - totalExpenses;
+                return Ok(new { Expenses = expenses, TotalExpenses = totalExpenses, Budget = budget.Amount, RemainingBudget = remainingBudget });
+            }
+            
+            return Ok(new { Expenses = expenses, TotalExpenses = totalExpenses, Budget = 0, RemainingBudget = 0 });
         }
+
 
         [HttpPost]
         public async Task<ActionResult<Expense>> AddExpense(Expense expense)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState); // Returns validation errors
+            }
+
+            
+
+            // Add the expense to the context and save changes
             _context.Expenses.Add(expense);
             await _context.SaveChangesAsync();
+
             return CreatedAtAction(nameof(GetExpenses), new { id = expense.Id }, expense);
         }
+
+
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteExpense(int id)

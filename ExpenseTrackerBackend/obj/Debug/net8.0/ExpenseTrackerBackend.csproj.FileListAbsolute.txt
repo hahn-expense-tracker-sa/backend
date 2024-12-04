@@ -1,11 +1,3 @@
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.csproj.AssemblyReference.cache
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.AssemblyInfoInputs.cache
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.AssemblyInfo.cs
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.csproj.CoreCompileInputs.cache
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.sourcelink.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\appsettings.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\ExpenseTrackerBackend.exe
@@ -30,6 +22,14 @@ C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.csproj.AssemblyReference.cache
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.AssemblyInfoInputs.cache
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.AssemblyInfo.cs
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.csproj.CoreCompileInputs.cache
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\ExpenseTrackerBackend.sourcelink.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Soukaina\DB_spatiales\hahn\backend\ExpenseTrackerBackend\obj\Debug\net8.0\staticwebassets\msbuild.ExpenseTrackerBackend.Microsoft.AspNetCore.StaticWebAssets.props

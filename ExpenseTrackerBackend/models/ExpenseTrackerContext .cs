@@ -12,8 +12,11 @@ namespace ExpenseTrackerBackend.models
     {
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Budget> Budgets { get; set; }
+        public DbSet<Category> Categories { get; set; }  // Add this line
 
         public ExpenseTrackerContext(DbContextOptions<ExpenseTrackerContext> options)
-            : base(options) { }
+                : base(options)
+            {
+            }
     }
 }
