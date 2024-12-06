@@ -25,7 +25,7 @@ namespace ExpenseTrackerBackend.Controllers
             return await _context.Budgets.FirstOrDefaultAsync();
         }
 
-        [HttpPost]
+       [HttpPost]
         public async Task<ActionResult<Budget>> SetBudget(Budget budget)
         {
             if (budget == null)
@@ -33,11 +33,29 @@ namespace ExpenseTrackerBackend.Controllers
                 return BadRequest("Budget cannot be null.");
             }
 
-            _context.Budgets.Update(budget);
-            await _context.SaveChangesAsync();
-            return Ok(budget);
+            // Fetch the list of budgets and find the existing budget for the current month and year
+            var existingBudget = await _context.Budgets
+                .FirstOrDefaultAsync(b => b.Month.Month == budget.Month.Month && b.Month.Year == budget.Month.Year);
+
+            // If the budget for the current month already exists, update it
+            if (existingBudget != null)
+            {
+                existingBudget.Amount = budget.Amount; 
+               
+                _context.Budgets.Update(existingBudget);  
+            }
+            else
+            {
+               
+                _context.Budgets.Add(budget); 
+            }
+
+            await _context.SaveChangesAsync();  
+            return Ok(existingBudget ?? budget);  
         }
 
-    }
+
+
+            }
 
 }

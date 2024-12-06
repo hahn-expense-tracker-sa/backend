@@ -8,7 +8,7 @@ namespace ExpenseTrackerBackend.models
     public class Category
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }= string.Empty;
         public ICollection<Expense> expenses { get; } = new List<Expense>();
     }
 }
