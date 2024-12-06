@@ -4,7 +4,7 @@
 
 A simple web application to track expenses, manage budgets, and visualize spending with a pie chart. Users can add, view, delete expenses and set monthly budgets.
 
-Features:
+-->Features:
 
 *Add, view, and delete expenses.
 
@@ -14,7 +14,7 @@ Features:
 
 *Responsive and user-friendly interface.
 
-Technologies Used:
+-->Technologies Used:
 
 *Frontend: Angular
 
@@ -30,7 +30,7 @@ and i also used the following tools:
 
 ![Image Alt Text](outils.png)
 
-Setup:
+-->Setup:
 
 *Clone the repo.
 
