@@ -40,6 +40,26 @@ namespace ExpenseTrackerBackend.Controllers
             return Ok(new { Expenses = expenses, TotalExpenses = totalExpenses, Budget = 0, RemainingBudget = 0 });
         }
 
+        [HttpGet("getByCategory")]
+public async Task<ActionResult> GetExpensesByCategory()
+{
+    // Group expenses by category and calculate the total amount for each category
+    var groupedExpenses = await _context.Expenses
+        .GroupBy(e => e.CategoryId) // Group by category ID
+        .Select(g => new
+        {
+            // Fetch the category name once per group
+            CategoryName = _context.Categories
+                .Where(c => c.Id == g.Key)
+                .Select(c => c.Name)
+                .FirstOrDefault(),
+            TotalAmount = g.Sum(e => e.Amount)  // Sum of expenses for the category
+        })
+        .ToListAsync();
+
+    return Ok(groupedExpenses);
+}
+
 
         [HttpPost]
         public async Task<ActionResult<Expense>> AddExpense(Expense expense)
